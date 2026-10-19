@@ -1,0 +1,16 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot that automatically clears designated channel when monitored voice channels become empty.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Greg Thomas",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "enmap": "^5.8.2",
+    "eslint": "^7.13.0"
+  }
+}
