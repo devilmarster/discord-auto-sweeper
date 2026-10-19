@@ -36,8 +36,8 @@ Configuration is stored locally using Enmap and SQLite, allowing settings to per
 ### Clone the repository
 
 ```bash
-git clone https://github.com/devilmarster/discord-bot-PUBLIC-.git
-cd discord-bot-PUBLIC-
+git clone https://github.com/devilmarster/discord-auto-sweeper.git
+cd discord-auto-sweeper
 ```
 
 ### Install dependencies
