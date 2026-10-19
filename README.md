@@ -1,10 +1,10 @@
 # Discord Auto Sweeper
 
-A Discord bot built with Node.js and Discord.js that monitors selected voice channels and automatically clears a designated text channel when the last user leaves the monitored voice channels.
+A Discord bot built with Node.js and Discord.js that monitors selected voice channels and automatically clears a configured text channel when all monitored voice channels become empty.
 
 ## About This Project
 
-This project was originally created to automate the process of clearing a designated Discord text channel once activity in specific voice channels had ended.
+This project was originally created to automate the process of clearing a Discord text channel once activity in specific voice channels had ended.
 
 It also served as a learning project for working with Discord APIs, persistent storage, command handling, and event-driven development using Node.js.
 
@@ -31,48 +31,11 @@ It also served as a learning project for working with Discord APIs, persistent s
 
 The bot allows a server owner to:
 
-1. Select a text channel for bot commands and cleanup messages.
+1. Configure a text channel for bot commands and cleanup operations.
 2. Select one or more voice channels to monitor.
-3. Automatically trigger a channel sweep when the final user leaves the monitored voice channels.
+3. Automatically trigger a channel sweep when all monitored voice channels become empty.
 
 Configuration is stored locally using Enmap and SQLite, allowing settings to persist across bot restarts.
-
-## Installation
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/devilmarster/discord-auto-sweeper.git
-cd discord-auto-sweeper
-```
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Create a Configuration File
-
-Copy:
-
-```text
-config.example.json
-```
-
-to:
-
-```text
-config.json
-```
-
-and replace the placeholder values with your own Discord bot token and Discord user ID.
-
-### Start the Bot
-
-```bash
-node index.js
-```
 
 ## Project Structure
 
@@ -81,7 +44,6 @@ commands/
 ├── database.js
 ├── help.js
 ├── ping.js
-├── pong.js
 ├── reload.js
 ├── server.js
 ├── sweep.js
@@ -90,9 +52,9 @@ commands/
 └── white-v-channels.js
 
 data/
+└── README.md
 
 index.js
-config.example.json
 package.json
 package-lock.json
 README.md
@@ -112,18 +74,14 @@ This project helped me develop experience with:
 - Git and source control
 - Building and maintaining a complete software project
 
-## Future Improvements
-
-Potential future enhancements include:
-
-- Slash command support
-- Improved command validation
-- Better logging and error reporting
-- Additional server management features
-- Migration to a newer Discord.js version
-
 ## Notes
 
-This repository does not include live database files, bot tokens, or other sensitive configuration data.
+Sensitive configuration values, database files, and runtime-generated data have been excluded from this repository.
 
-Database files are generated automatically when the bot is run and are excluded from source control.
+The `data` directory contains documentation only. SQLite database files are generated automatically when the bot is run and are not included in source control.
+
+This repository is intended to showcase the project's implementation and structure rather than serve as a production-ready deployment package.
+
+## Licence
+
+This project is provided for educational, learning, and portfolio purposes.
